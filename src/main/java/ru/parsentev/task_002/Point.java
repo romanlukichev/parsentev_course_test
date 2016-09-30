@@ -15,12 +15,21 @@ public class Point {
     private final int x;
     private final int y;
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
     public Point(final int x, final int y) {
         this.x = x;
         this.y = y;
     }
 
     public double distanceTo(final Point point) {
-        throw new UnsupportedOperationException();
+        return Math.sqrt( (point.getX()-this.x)*(point.getX()-this.x) + (point.getY()-this.y)*(point.getY()-this.y));
+        //throw new UnsupportedOperationException();
     }
 }
